@@ -145,37 +145,42 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="relative text-white py-20">
-      <div className="w-full h-[500px] relative overflow-hidden flex justify-center items-center">
-        <Image
-          src="/images/about-image.jpg"
-          alt="About Me"
-          layout="intrinsic"
-          width={1000}
-          height={500}
-          objectFit="contain"
-          className="rounded-lg"
-        />
+  <section id="about" className="relative text-white py-20">
+    <div className="w-full h-[500px] relative overflow-hidden flex justify-center items-center">
+      <Image
+        src="/images/about-image.jpg"
+        alt="About Me"
+        layout="intrinsic"
+        width={1000}
+        height={500}
+        objectFit="contain"
+        className="rounded-lg"
+      />
+    </div>
+    <div className="text-center mt-4">
+      <p className="text-lg italic text-white p-4">
+        Captured during my 8-week internship at Jazz Digital Headquarters, Islamabad, where I gained hands-on experience in cloud computing, IT tools, and regulatory affairs. This internship helped me develop both technical and professional skills, preparing me for the next phase in my career.
+      </p>
+    </div>
+    <div className="relative z-10 max-w-5xl mx-auto text-center px-6 mt-8">
+      <h2 className="text-5xl font-bold mb-6">About Me</h2>
+      <p className="text-lg leading-relaxed">
+        I’m a Computer Engineering graduate with a strong focus on software testing, data analysis, and cloud computing. 
+        Skilled in Python, SQL, and automation, I enjoy working with large datasets, debugging complex systems, and optimizing performance. 
+        With hands-on experience in web development, backend technologies, and cloud platforms like AWS and Kubernetes, 
+        I am passionate about building scalable solutions. Whether it’s testing software, analyzing trends, or deploying applications, 
+        I’m always eager to learn, innovate, and contribute to cutting-edge technology.
+      </p>
+      <div className="flex justify-center mt-8 space-x-4">
+        <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</TabButton>
+        <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</TabButton>
+        <TabButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</TabButton>
       </div>
-      <div className="relative z-10 max-w-5xl mx-auto text-center px-6 mt-8">
-        <h2 className="text-5xl font-bold mb-6">About Me</h2>
-        <p className="text-lg leading-relaxed">
-          I’m a Computer Engineering graduate with a strong focus on software testing, data analysis, and cloud computing. 
-          Skilled in Python, SQL, and automation, I enjoy working with large datasets, debugging complex systems, and optimizing performance. 
-          With hands-on experience in web development, backend technologies, and cloud platforms like AWS and Kubernetes, 
-          I am passionate about building scalable solutions. Whether it’s testing software, analyzing trends, or deploying applications, 
-          I’m always eager to learn, innovate, and contribute to cutting-edge technology.
-        </p>
-        <div className="flex justify-center mt-8 space-x-4">
-          <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</TabButton>
-          <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>Education</TabButton>
-          <TabButton selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>Certifications</TabButton>
-        </div>
-        <div className="mt-8 text-left">
-          {TAB_DATA.find((t) => t.id === tab).content}
-        </div>
+      <div className="mt-8 text-left">
+        {TAB_DATA.find((t) => t.id === tab).content}
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
