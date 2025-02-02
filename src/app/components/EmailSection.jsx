@@ -52,7 +52,7 @@ const EmailSection = () => {
           <Link href="https://github.com/ikhushal?tab=repositories">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com/in/khushalkn">
+          <Link href="https://linkedin.com/in/khushalkn">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
         </div>
@@ -114,7 +114,7 @@ const EmailSection = () => {
               className="bg-gradient-to-br from-red-500 via-orange-500 to-yellow-400 text-white font-medium py-2.5 px-5 rounded-lg w-full 
               transition duration-300 hover:shadow-[0_0_20px_rgba(255,69,0,0.6)] hover:scale-105"
             >
-              Send Message
+              Give Review
             </button>
           </form>
         )}
